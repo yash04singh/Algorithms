@@ -35,19 +35,17 @@ class Editdistance
 			}
 		for(int i=0;i<n;i++){
 				sp2[s2.charAt(i)]++;
-				
-				}
-		for(int i = 0;i<n;i++){
-				if(sp1[s2.charAt(i)]!=0){
+			        if(sp1[s2.charAt(i)]!=0){
 					sp1[s2.charAt(i)]--;
 					sp2[s2.charAt(i)]--;
 				}
+				
 			}
 		for(int i=0;i<128;i++){
 				if(sp2[i]!=0)count2++;
 				if(sp1[i]!=0)count1++;
 				
-				   }
+			}
 			
 		if(count1 > count2)
 			System.out.println("Minimum No. of steps to change string1 to string2  " + count1);
